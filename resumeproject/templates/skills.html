@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block main-body %}
+<div class="container">
+    <div class="container bg-secondary m-4 p-2 rounded shadow">
+        <h1 class=" text-center text-light  h2">Skills</h1>
+    </div>
+    <div class="container m-4 shadow">
+
+        {% for key,value in skills.items %}
+
+            <div class="row mt-5 border-bottom p-1">
+                
+                <div class="col-3">
+                    {{key}}
+                </div>
+
+                <div class="col-9">
+                    <progress value="{{value}}" max="100" ></progress> {{value}} %
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock main-body %}

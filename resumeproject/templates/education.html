@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block main-body %}
+<div class="container">
+    <div class="container bg-secondary m-4 p-2 rounded shadow">
+        <h1 class=" text-center text-light  h2">Education Details</h1>
+    </div>
+    <div class="container m-4 shadow ">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Sr.no</th>
+                <th scope="col">Study</th>
+                <th scope="col">Passing Year</th>
+                <th scope="col">Board</th>
+                <th scope="col">Percentage/CGPA</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for key,value in education.items %}
+                <tr>
+                    {% for k,v in value.items %}
+                        <td>
+                            {{v}}
+                        </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+              
+            </tbody>
+          </table>
+
+    </div>
+</div>
+{% endblock main-body %}

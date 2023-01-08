@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block main-body %}
+<div class="container">
+    <div class="container bg-secondary m-4 p-2 rounded shadow">
+        <h1 class=" text-center text-light  h2">Contact Me</h1>
+    </div>
+    <div class="container m-4">
+        <form action="{% url 'thanks' %}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name : </label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Your Name Here" required>
+            </div>
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contact : </label>
+                <input type="text" class="form-control" id="contact" placeholder="Enter Your Contact Here" required>
+            </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email address : </label>
+                <input type="email" class="form-control" id="Email" placeholder="Enter Your Email Here" required>
+            </div>
+            <div class="mb-3">
+                <label for="skill" class="form-label">Skills Wanted :</label><br>
+                <input type="checkbox"  name="skill" id="skill" value="Python"> Python <br>
+                <input type="checkbox"  name="skill" id="skill" value="Database"> Database <br>
+                <input type="checkbox"  name="skill" id="skill" value="HTML"> HTML <br>
+                <input type="checkbox"  name="skill" id="skill" value="Css"> Css <br>
+            </div>
+            <div class="mb-3">
+                <label for="add_skill" class="form-label">Additional Skills :</label><br>
+                <textarea name="add_skill" id="add_skill" cols="80" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock main-body %}
